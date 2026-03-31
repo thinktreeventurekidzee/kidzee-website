@@ -106,7 +106,7 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3">
             <Button
-              text="Enrol Now 🚀"
+              text="Enroll Now 🚀"
               href="#contact"
               variant="secondary"
             />
