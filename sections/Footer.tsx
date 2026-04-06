@@ -10,20 +10,39 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-10">
 
-        {/* LEFT - BRAND */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">
-            Kidzee Virgonagar
-          </h2>
+  {/* LEFT - BRAND */}
+<div className="space-y-4">
+  <h2 className="text-2xl font-bold">
+    Kidzee Virgonagar
+  </h2>
 
-          <p className="text-white/90 text-sm leading-relaxed">
-            Where little minds learn, play and grow into bright futures in a safe and joyful environment.
-          </p>
+  <p className="text-white/90 text-sm leading-relaxed">
+    Where little minds learn, play and grow into bright futures in a safe and joyful environment.
+  </p>
 
-          <p className="text-sm text-white/80">
-            📍 Virgonagar, Aavalahalli, Bengaluru
-          </p>
-        </div>
+  <p className="text-sm text-white/80">
+    📍 Virgonagar, Aavalahalli, Bengaluru
+  </p>
+
+  {/* 🔥 MAP EMBED */}
+  <div className="mt-3 rounded-xl overflow-hidden shadow-lg border border-white/20">
+    <iframe
+      src="https://maps.google.com/maps?q=Cheemasandra%20Virgonagar%20Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      className="w-full h-40 border-0"
+      loading="lazy"
+    />
+  </div>
+
+  {/* 🔗 OPEN MAP BUTTON */}
+  <a
+    href="https://maps.app.goo.gl/NoLk1uoME95T4aHu6"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block mt-3 bg-white text-indigo-600 px-4 py-2 rounded-lg text-sm font-semibold shadow hover:scale-105 transition"
+  >
+    📍 Open in Google Maps
+  </a>
+</div>
 
         {/* NAVIGATION */}
         <div className="space-y-4">
@@ -119,7 +138,7 @@ export default function Footer() {
           </div>
         </div>
 
-      </div>
+      </div> 
 
       {/* BOTTOM */}
       <div className="border-t border-white/30 mt-10 pt-4 text-center text-sm text-white/80">

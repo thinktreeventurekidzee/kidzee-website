@@ -5,7 +5,6 @@ import Image from "next/image";
 
 // ✅ Use your real images
 const images = [
-  "/images/gallery4.png",
   "/images/gallery5.png",
   "/images/kids.png",
   "/images/kidzee-gallery-a.png",
@@ -50,7 +49,7 @@ export default function Gallery() {
               x: ["0%", "-50%"],
             }}
             transition={{
-              duration: 20,
+              duration: 180,
               repeat: Infinity,
               ease: "linear",
             }}
