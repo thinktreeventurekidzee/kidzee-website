@@ -43,7 +43,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -52,9 +51,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col selection:bg-yellow-300 selection:text-black">
         {children}
       </body>
     </html>

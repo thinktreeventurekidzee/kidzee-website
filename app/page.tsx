@@ -6,7 +6,7 @@ import Gallery from "@/sections/Gallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Contact from "@/sections/Contact";
 import Footer from "@/sections/Footer";
-import PosterShowcase from "@/sections/PosterShowcase";
+
 
 
 export default function Home() {
@@ -16,7 +16,6 @@ export default function Home() {
       <Hero />
       <About />
       <Programs />
-      <PosterShowcase />
       <Gallery />
       <Contact />
       <Footer />
