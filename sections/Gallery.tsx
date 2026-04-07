@@ -7,7 +7,6 @@ const images = [
   "/images/kids.png",
   "/images/kidzee-gallery-a.png",
   "/images/kidzee-gallery-b.png",
-  "/images/kidzee-gallery-c.png",
   "/images/kidzee-gallery-d.png",
   "/images/kidzee-gallery-e.png",
   "/images/kidzee-gallery-f.png",

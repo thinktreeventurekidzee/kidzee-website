@@ -33,7 +33,7 @@ export default function Hero() {
 
           {/* BODY */}
           <p className="text-lg md:text-xl">
-            <span className="text-gray-600">
+            <span className="text-gray-800">
               A joyful, safe and inspiring preschool where learning feels like play.
             </span>
           </p>

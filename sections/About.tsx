@@ -102,19 +102,19 @@ useEffect(() => {
                 <p className="font-semibold text-gray-900 font-[var(--font-fredoka)]">
                   Safe & Secure Campus
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-800">
                   CCTV-monitored with a child-friendly infrastructure
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
-              <Smile className="text-yellow-500 mt-1" />
+              <Smile className="text-yellow-600 mt-1" />
               <div>
                 <p className="font-semibold text-gray-900 font-[var(--font-fredoka)]">
                   Joyful Learning Experience
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-800">
                   Engaging, fun-based activities every day
                 </p>
               </div>
@@ -126,7 +126,7 @@ useEffect(() => {
                 <p className="font-semibold text-gray-900 font-[var(--font-fredoka)]">
                   Activity-Based Curriculum
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-800">
                   Learning through play, art, and storytelling
                 </p>
               </div>
@@ -138,7 +138,7 @@ useEffect(() => {
                 <p className="font-semibold text-gray-900 font-[var(--font-fredoka)]">
                   Experienced Educators
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-900">
                   Caring, trained, and dedicated teachers
                 </p>
               </div>
@@ -151,7 +151,7 @@ useEffect(() => {
 
             <div className="flex items-center gap-3 p-4 bg-green-50 rounded-xl shadow-sm">
               <MapPin className="text-green-600" />
-              <span className="text-sm text-gray-700">
+              <span className="text-sm text-gray-800">
                 Virgonagar, Bengaluru
               </span>
             </div>

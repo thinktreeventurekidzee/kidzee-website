@@ -12,15 +12,15 @@ export default function Footer() {
 
         {/* LEFT - BRAND */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold font-[var(--font-fredoka)] text-gray-900">
+          <h2 className="text-3xl font-extrabold font-[var(--font-fredoka)] text-black">
             Kidzee Virgonagar
           </h2>
 
-          <p className="text-gray-700 text-sm leading-relaxed">
+          <p className="text-gray-900 text-sm leading-relaxed">
             Where little minds learn, play and grow into bright futures in a safe and joyful environment.
           </p>
 
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-900">
             📍 Virgonagar, Aavalahalli, Bengaluru
           </p>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             href="https://maps.app.goo.gl/NoLk1uoME95T4aHu6"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 bg-white text-indigo-600 px-4 py-2 rounded-lg text-sm font-semibold shadow hover:scale-105 transition font-[var(--font-fredoka)]"
+            className="inline-block mt-3 bg-white text-indigo-700 px-4 py-2 rounded-lg text-sm font-semibold shadow hover:scale-105 transition font-[var(--font-fredoka)]"
           >
             📍 Open in Google Maps
           </a>
@@ -44,29 +44,29 @@ export default function Footer() {
 
         {/* NAVIGATION */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold font-[var(--font-fredoka)] text-gray-900">
+          <h3 className="text-lg font-extrabold font-[var(--font-fredoka)] text-black">
             Explore
           </h3>
 
-          <ul className="space-y-2 text-gray-700">
-            <li><a href="#about" className="hover:text-indigo-600 transition">About Us</a></li>
-            <li><a href="#programs" className="hover:text-indigo-600 transition">Our Programs</a></li>
-            <li><a href="#gallery" className="hover:text-indigo-600 transition">Gallery</a></li>
-            <li><a href="#contact" className="hover:text-indigo-600 transition">Contact</a></li>
+          <ul className="space-y-2 text-gray-800">
+            <li><a href="#about" className="hover:text-indigo-700 transition">About Us</a></li>
+            <li><a href="#programs" className="hover:text-indigo-700 transition">Our Programs</a></li>
+            <li><a href="#gallery" className="hover:text-indigo-700 transition">Gallery</a></li>
+            <li><a href="#contact" className="hover:text-indigo-700 transition">Contact</a></li>
           </ul>
         </div>
 
         {/* CONTACT + SOCIAL */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold font-[var(--font-fredoka)] text-gray-900">
+          <h3 className="text-lg font-extrabold font-[var(--font-fredoka)] text-black">
             Connect With Us
           </h3>
 
-          <div className="space-y-3 text-gray-700 text-sm">
+          <div className="space-y-3 text-gray-800 text-sm">
 
             <div className="flex items-center gap-3">
               <Phone size={18} />
-              <a href="tel:8088042991" className="hover:text-indigo-600 transition">
+              <a href="tel:8088042991" className="hover:text-indigo-700 transition">
                 8088042991
               </a>
             </div>
@@ -76,7 +76,7 @@ export default function Footer() {
               <a
                 href="https://www.facebook.com/KidzeeIndia"
                 target="_blank"
-                className="hover:text-indigo-600 transition"
+                className="hover:text-indigo-700 transition"
               >
                 KidzeeIndia
               </a>
@@ -87,7 +87,7 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/kidzeeindia"
                 target="_blank"
-                className="hover:text-indigo-600 transition"
+                className="hover:text-indigo-700 transition"
               >
                 kidzeeindia
               </a>
@@ -98,7 +98,7 @@ export default function Footer() {
               <a
                 href="https://www.kidzee.com"
                 target="_blank"
-                className="hover:text-indigo-600 transition"
+                className="hover:text-indigo-700 transition"
               >
                 kidzee.com
               </a>
@@ -116,11 +116,11 @@ export default function Footer() {
 
         {/* CTA */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold font-[var(--font-fredoka)] text-gray-900">
+          <h3 className="text-lg font-extrabold font-[var(--font-fredoka)] text-black">
             Admissions Open 2026 🎓
           </h3>
 
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-800 text-sm">
             Limited seats available. Connect with us today.
           </p>
 
@@ -142,7 +142,7 @@ export default function Footer() {
       </div> 
 
       {/* BOTTOM */}
-      <div className="border-t border-gray-300 mt-10 pt-4 text-center text-sm text-gray-600">
+      <div className="border-t border-gray-300 mt-10 pt-4 text-center text-sm text-gray-700">
         © 2026 Kidzee Virgonagar • All Rights Reserved
       </div>
 
