@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
+export default function Navbar({ setOpen }: { setOpen: any }) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "About 🧸", href: "#about" },
@@ -17,7 +17,7 @@ export default function Navbar() {
     const el = document.querySelector(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
-      setOpen(false);
+      setMenuOpen(false);
     }
   };
 
@@ -34,15 +34,11 @@ export default function Navbar() {
           <div className="flex flex-col items-center px-1 py-0">
 
             <svg width="160" height="65" viewBox="0 0 220 100">
-              <path
-                id="curve"
-                d="M20,70 Q110,25 200,70"
-                fill="transparent"
-              />
+              <path id="curve" d="M20,70 Q110,25 200,70" fill="transparent" />
 
               <text
                 fill="#6B21A8"
-                fontSize="60"
+                fontSize="50"
                 fontWeight="1000"
                 letterSpacing="3"
                 style={{
@@ -56,10 +52,9 @@ export default function Navbar() {
               </text>
             </svg>
 
-            <p className="text-[12px] text-purple-800 font-semibold text-center -mt-3">
+            <p className="text-[12px] text-purple-900 font-semibold text-center -mt-3">
               Virgonagar, Cheemasandra ✨
             </p>
-
           </div>
 
           <motion.div
@@ -83,11 +78,20 @@ export default function Navbar() {
             </button>
           ))}
 
+          {/* 🔥 ANNOUNCEMENT BUTTON */}
+          <button
+            onClick={() => setOpen(true)}
+            className="text-sm font-semibold text-indigo-600 hover:scale-105 transition"
+          >
+            Announcement 🎉
+          </button>
+
+          {/* CTA */}
           <motion.button
             onClick={() => handleScroll("#contact")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          className="px-5 py-1.5 rounded-full bg-yellow-300 hover:bg-yellow-200 text-black text-sm font-semibold shadow-md transition font-[var(--font-fredoka)]"
+            className="px-5 py-1.5 rounded-full bg-yellow-300 hover:bg-yellow-200 text-black text-sm font-semibold shadow-md transition font-[var(--font-fredoka)]"
           >
             🎓 Admissions 2026-27
           </motion.button>
@@ -96,19 +100,19 @@ export default function Navbar() {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col justify-center items-center gap-1"
         >
           <motion.span
-            animate={open ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
+            animate={menuOpen ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
             className="w-5 h-0.5 bg-black block"
           />
           <motion.span
-            animate={open ? { opacity: 0 } : { opacity: 1 }}
+            animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
             className="w-5 h-0.5 bg-black block"
           />
           <motion.span
-            animate={open ? { rotate: -45, y: -5 } : { rotate: 0, y: 0 }}
+            animate={menuOpen ? { rotate: -45, y: -5 } : { rotate: 0, y: 0 }}
             className="w-5 h-0.5 bg-black block"
           />
         </button>
@@ -117,13 +121,13 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <AnimatePresence>
-        {open && (
+        {menuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
+            onMouseEnter={() => setMenuOpen(true)}
+            onMouseLeave={() => setMenuOpen(false)}
             className="md:hidden bg-white shadow-lg px-5 py-5 space-y-4 font-[Comic_Neue]"
           >
             {navLinks.map((link, index) => (
@@ -136,13 +140,21 @@ export default function Navbar() {
               </button>
             ))}
 
+            {/* 🔥 ANNOUNCEMENT MOBILE */}
+            <button
+              onClick={() => setOpen(true)}
+              className="font-semibold text-sm text-indigo-600"
+            >
+              Announcement 🎉
+            </button>
+
             <motion.button
-  onClick={() => handleScroll("#contact")}
-  whileTap={{ scale: 0.95 }}
-  className="w-full bg-yellow-200 text-black py-2.5 rounded-full font-semibold text-sm"
->
-  🎓 Start Admission 2026-27
-</motion.button>
+              onClick={() => handleScroll("#contact")}
+              whileTap={{ scale: 0.95 }}
+              className="w-full bg-yellow-200 text-black py-2.5 rounded-full font-semibold text-sm"
+            >
+              🎓 Start Admission 2026-27
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

@@ -3,14 +3,14 @@
 /* 🌿 ROOT COLORS */
 :root {
   --background: #f7f5ff;
-  --foreground: #1a1a1a;
+  --foreground: #111827; /* darker for better contrast */
 
   /* 🎨 Soft Gradient */
   --gradient-start: #8a7ff0;
   --gradient-mid: #ffb3d9;
   --gradient-end: #ffe7a3;
 
-  /* 🔥 FONT FIX (IMPORTANT) */
+  /* 🔥 FONT */
   --font-sans: var(--font-quicksand);
   --font-mono: var(--font-geist-mono);
 }
@@ -25,7 +25,7 @@
 
 /* 🧱 BASE */
 body {
-  background: 
+  background:
     radial-gradient(circle at 20% 30%, #a18cd1 0%, transparent 40%),
     radial-gradient(circle at 80% 20%, #fbc2eb 0%, transparent 40%),
     radial-gradient(circle at 50% 80%, #ffe7a3 0%, transparent 40%),
@@ -33,7 +33,6 @@ body {
 
   color: var(--foreground);
 
-  /* 🔥 MAIN FONT APPLY */
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 
   -webkit-font-smoothing: antialiased;
@@ -44,9 +43,7 @@ body {
 html {
   -webkit-text-size-adjust: 100%;
 }
-
-html,
-body {
+html, body {
   overflow-x: hidden;
 }
 
@@ -54,100 +51,116 @@ body {
 
 /* Slide Up */
 @keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-
 .animate-slideUp {
   animation: slideUpFade 0.8s ease-out forwards;
 }
 
 /* Emoji Pop */
 @keyframes popIn {
-  0% {
-    transform: scale(0) rotate(-20deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotate(0);
-    opacity: 1;
-  }
+  0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
 }
-
 .animate-pop {
   animation: popIn 0.6s ease-out forwards;
 }
 
-/* Rain Drop */
+/* Drop */
 @keyframes dropIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-60px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-
 .animate-drop {
   animation: dropIn 0.7s ease-out forwards;
 }
 
-/* Slow Spin */
+/* Spin */
 @keyframes spinSlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-
 .animate-spin-slow {
   animation: spinSlow 8s linear infinite;
-}/* 🔥 FONT CLASSES (FORCE APPLY) */
-
-.font-fredoka {
-  font-family: var(--font-fredoka), sans-serif;
 }
 
-.font-quicksand {
-  font-family: var(--font-quicksand), sans-serif;
+/* ✨ GLITTER EFFECT */
+@keyframes shimmer {
+  0% { background-position: -500px 0; }
+  100% { background-position: 500px 0; }
+}
+.glitter {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0.2) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite linear;
 }
 
-.font-comic {
-  font-family: var(--font-comic), cursive;
-}
-/* 🔥 DARK YELLOW / AMBER GLOW (INSTANT) */
+/* 🔥 GLOW BUTTON */
 .glow-btn {
   position: relative;
   z-index: 1;
 }
-
 .glow-btn::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 9999px;
   z-index: -1;
-  animation: glowPulse 2.2s ease-in-out infinite;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 0 rgba(245,158,11,0); }
+  50% { box-shadow: 0 0 30px rgba(245,158,11,0.9); }
+  100% { box-shadow: 0 0 0 rgba(245,158,11,0); }
 }
 
-@keyframes glowPulse {
-  0% {
-    box-shadow: 0 0 0px rgba(245, 158, 11, 0.0); /* amber */
-  }
-  40% {
-    box-shadow: 0 0 28px rgba(245, 158, 11, 0.9); /* 🔥 strong glow */
-  }
-  100% {
-    box-shadow: 0 0 0px rgba(245, 158, 11, 0.0);
-  }
+/* 🔥 FONT CLASSES */
+.font-fredoka {
+  font-family: var(--font-fredoka), sans-serif;
+}
+.font-quicksand {
+  font-family: var(--font-quicksand), sans-serif;
+}
+.font-comic {
+  font-family: var(--font-comic), cursive;
+}
+
+/* 💥 PREMIUM INPUT STYLE (FIXED FADED ISSUE) */
+.inputStyle {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #d1d5db;
+
+  background: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827; /* 🔥 DARK TEXT */
+
+  transition: all 0.25s ease;
+}
+
+/* 🔥 PLACEHOLDER FIX */
+.inputStyle::placeholder {
+  color: #4b5563;
+  font-weight: 500;
+  opacity: 1;
+}
+
+/* 🔥 FOCUS */
+.inputStyle:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+  background: #ffffff;
+}
+
+/* 💎 HOVER EFFECT */
+.inputStyle:hover {
+  border-color: #9ca3af;
 }
