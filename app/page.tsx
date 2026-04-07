@@ -11,7 +11,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Contact from "@/sections/Contact";
 import Footer from "@/sections/Footer";
 import AnnouncementModal from "@/components/AnnouncementModal";
-import Countdown from "@/sections/Countdown";   
+  
 
 
 
@@ -46,7 +46,7 @@ export default function Home() {
       <About />
       <Programs />
       <Gallery />
-      <Countdown />
+     
       <Contact />
       <Footer />
 
